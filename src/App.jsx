@@ -37,7 +37,6 @@ function Home() {
   );
 }
 
-// Scrolls to #hash targets (and focuses inputs like #search); otherwise resets to top on navigation.
 function ScrollManager() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -60,7 +59,7 @@ function ScrollManager() {
 
 function App() {
   return (
-    <BrowserRouter basename="/ClubX---University-Club-Management">
+    <BrowserRouter basename="/ClubX-University-Club/">
       <IntroScreen />
       <ScrollManager />
       <Routes>
