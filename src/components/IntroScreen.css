@@ -1,0 +1,54 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity var(--fade) ease, visibility 0s linear var(--fade);
+}
+.intro--fade { opacity: 0; visibility: hidden; pointer-events: none; }
+.intro--fade .intro__content { transform: scale(1.04); transition: transform var(--fade) ease; }
+
+.intro__glow {
+  position: absolute;
+  width: 70vmin;
+  height: 70vmin;
+  background: radial-gradient(circle, rgba(91, 140, 255, 0.2), rgba(139, 108, 255, 0.08) 45%, transparent 68%);
+  animation: intro-glow 1.8s ease-out both;
+}
+.intro__content { position: relative; text-align: center; padding: 0 1.5rem; }
+.intro__title {
+  display: flex;
+  justify-content: center;
+  gap: 0.08em;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 12vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: var(--text);
+}
+.intro__title span { display: inline-block; opacity: 0; transform: translateY(0.35em); animation: intro-rise 0.7s var(--ease) forwards; }
+.intro__title span:last-child { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.intro__line {
+  height: 1px;
+  width: min(220px, 50vw);
+  margin: 1.5rem auto 1.1rem;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  transform: scaleX(0);
+  animation: intro-line 0.9s 0.9s var(--ease) forwards;
+}
+.intro__subtitle { color: var(--muted); font-size: clamp(0.85rem, 2.4vw, 1rem); letter-spacing: 0.04em; opacity: 0; animation: intro-fade 0.8s 1.2s ease forwards; }
+
+@keyframes intro-rise { to { opacity: 1; transform: none; } }
+@keyframes intro-line { to { transform: scaleX(1); } }
+@keyframes intro-fade { to { opacity: 1; } }
+@keyframes intro-glow { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro__title span, .intro__line, .intro__subtitle, .intro__glow { animation: none; opacity: 1; transform: none; }
+  .intro--fade .intro__content { transform: none; }
+}
