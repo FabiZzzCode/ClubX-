@@ -32,44 +32,24 @@ The app will start at `http://localhost:5173`.
 
 ##  Project Structure
 
-```
-ClubX/
-├── public/
-│   └── icons.svg
-├── src/
-│   ├── assets/           
-│   ├── components/       
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Mission.jsx
-│   │   ├── Events.jsx
-│   │   ├── Gallery.jsx
-│   │   └── Login.jsx
-│   ├── pages/            
-│   │   └── IIUCPS.jsx
-│   ├── App.jsx
-│   ├── App.css
-│   └── main.jsx
-├── .gitignore
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
+
 
 ##  Screenshots
 ### Hero Section
 <img width="1842" height="852" alt="image" src="<img width="1306" height="603" alt="image" src="https://github.com/user-attachments/assets/f584de04-881c-4525-8342-50777078fdd5" />
 " />
 
-### Mission Section
-<img width="1839" height="810" alt="image" src="https://github.com/user-attachments/assets/81c91947-4961-4656-8083-18130404d9b6" />
+### Find the Community
+<img width="1839" height="810" alt="image" src="<img width="1306" height="603" alt="image" src="https://github.com/user-attachments/assets/852048ed-22a2-4e94-b7ed-5d791f81685b" />
+" />
 
 ### Events Section
-<img width="1853" height="826" alt="image" src="https://github.com/user-attachments/assets/d378bec1-1a33-4923-b318-7cf0a7a99994" />
+<img width="1853" height="826" alt="image" src="<img width="1306" height="603" alt="image" src="https://github.com/user-attachments/assets/529a9f80-99a3-4d6e-bf64-0c0efce98b06" />
+" />
 
 ### Gallery Section
-<img width="1760" height="826" alt="image" src="https://github.com/user-attachments/assets/6fafe60c-263d-41cb-badd-c3007b9a6d9a" />
+<img width="1760" height="826" alt="image" src="<img width="1349" height="612" alt="image" src="https://github.com/user-attachments/assets/08823190-3fc3-4969-8668-fdcbf0b1a57f" />
+" />
 
 ##  Roadmap
 
