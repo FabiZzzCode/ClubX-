@@ -59,7 +59,8 @@ ClubX/
 
 ##  Screenshots
 ### Hero Section
-<img width="1842" height="852" alt="image" src="https://github.com/user-attachments/assets/9c87b83d-d687-457f-aa63-18c88d20c7bb" />
+<img width="1842" height="852" alt="image" src="<img width="1306" height="603" alt="image" src="https://github.com/user-attachments/assets/f584de04-881c-4525-8342-50777078fdd5" />
+" />
 
 ### Mission Section
 <img width="1839" height="810" alt="image" src="https://github.com/user-attachments/assets/81c91947-4961-4656-8083-18130404d9b6" />
