@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ClubX---University-Club-Management/',
+  base: '/ClubX-University-Club/',
 })
