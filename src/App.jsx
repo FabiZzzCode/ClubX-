@@ -5,13 +5,13 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ClubDiscovery from "./components/ClubDiscovery";
 import CampusPulse from "./components/CampusPulse";
-import Events from "./components/Events";
 import Announcements from "./components/Announcements";
 import Mission from "./components/Mission";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import ClubDetails from "./pages/ClubDetails";
+import EventsPage from "./pages/EventsPage";   
 import IntroScreen from "./components/IntroScreen";
 import useReveal from "./hooks/useReveal";
 
@@ -27,7 +27,6 @@ function Home() {
         <Hero />
         <ClubDiscovery />
         <CampusPulse />
-        <Events />
         <Announcements />
         <Mission />
         <Gallery />
@@ -37,7 +36,6 @@ function Home() {
   );
 }
 
-// Scrolls to #hash targets (and focuses inputs like #search); otherwise resets to top on navigation.
 function ScrollManager() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -60,13 +58,14 @@ function ScrollManager() {
 
 function App() {
   return (
-    <BrowserRouter basename="/ClubX---University-Club-Management">
+    <BrowserRouter basename="/ClubX-University-Club/">
       <IntroScreen />
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/clubs/:slug" element={<ClubDetails />} />
+        <Route path="/events" element={<EventsPage />} />   {/* ← NOTUN route */}
       </Routes>
     </BrowserRouter>
   );

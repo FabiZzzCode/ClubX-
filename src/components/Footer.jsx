@@ -1,23 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Arrow } from "./Icons";
 
+const SECTIONS = ["clubs", "announcements"];
+
 function Footer() {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const goToSection = (e, id) => {
+    e.preventDefault();
+
+    const scroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    if (pathname === "/") {
+      // Already home — just update the hash and scroll
+      navigate({ pathname: "/", hash: `#${id}` }, { replace: true });
+      scroll();
+    } else {
+      // Go home first; the Navbar/Home hash effect will scroll once mounted
+      navigate({ pathname: "/", hash: `#${id}` });
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="wrap footer__cta">
         <h2>Ready to find your people?</h2>
-        <Link to={{ pathname: "/", hash: "#clubs" }} className="btn btn--primary">
+        <a
+          href="#clubs"
+          className="btn btn--primary"
+          onClick={(e) => goToSection(e, "clubs")}
+        >
           Explore Clubs <Arrow />
-        </Link>
+        </a>
       </div>
+
       <div className="wrap footer__bar">
         <Link to="/" className="nav__brand">Club<span>X</span></Link>
+
         <nav aria-label="Footer">
-          <Link to={{ pathname: "/", hash: "#clubs" }}>Clubs</Link>
-          <Link to={{ pathname: "/", hash: "#events" }}>Events</Link>
-          <Link to={{ pathname: "/", hash: "#announcements" }}>Announcements</Link>
+          <a href="#clubs" onClick={(e) => goToSection(e, "clubs")}>Clubs</a>
+          <Link to="/events">Events</Link>
+          <a href="#announcements" onClick={(e) => goToSection(e, "announcements")}>
+            Announcements
+          </a>
           <Link to="/login">Log in</Link>
         </nav>
+
         <p>© {new Date().getFullYear()} ClubX · University Club Management</p>
       </div>
     </footer>
