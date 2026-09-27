@@ -17,6 +17,8 @@ import EventsPage from "./pages/EventsPage";
 import IntroScreen from "./components/IntroScreen";
 import useReveal from "./hooks/useReveal";
 
+import EventDetail from "./pages/EventDetail";
+
 import "./App.css";
 import "./styles/home.css";
 
@@ -67,9 +69,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/clubs/:slug" element={<ClubDetails />} />
-        <Route path="/clubs/:slug/join" element={<ClubJoin />} />
-        <Route path="/admin/applications" element={<AdminApplications />} />
-        <Route path="/events" element={<EventsPage />} />   {/* ← NOTUN route */}
+// <<<<<<< Fabiya
+//         <Route path="/clubs/:slug/join" element={<ClubJoin />} />
+//         <Route path="/admin/applications" element={<AdminApplications />} />
+//         <Route path="/events" element={<EventsPage />} />   {/* ← NOTUN route */}
+// =======
+        <Route path="/events" element={<EventsPage />} />  
+        <Route path="/events/:id" element={<EventDetail />} />
+// >>>>>>> main
       </Routes>
     </BrowserRouter>
   );
