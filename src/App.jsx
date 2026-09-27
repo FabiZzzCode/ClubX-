@@ -11,7 +11,9 @@ import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import ClubDetails from "./pages/ClubDetails";
-import EventsPage from "./pages/EventsPage";   
+import ClubJoin from "./pages/ClubJoin";
+import AdminApplications from "./pages/AdminApplications";
+import EventsPage from "./pages/EventsPage";
 import IntroScreen from "./components/IntroScreen";
 import useReveal from "./hooks/useReveal";
 
@@ -65,6 +67,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/clubs/:slug" element={<ClubDetails />} />
+        <Route path="/clubs/:slug/join" element={<ClubJoin />} />
+        <Route path="/admin/applications" element={<AdminApplications />} />
         <Route path="/events" element={<EventsPage />} />   {/* ← NOTUN route */}
       </Routes>
     </BrowserRouter>
